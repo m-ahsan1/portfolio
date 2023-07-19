@@ -1,35 +1,43 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
+import { Fabars, Fatimes } from "react-icons/fa";
 
 function NavbarComponent() {
+  const links = [
+    {
+      id: 1,
+      link: "home",
+    },
+    {
+      id: 2,
+      link: "about",
+    },
+    {
+      id: 3,
+      link: "portfolio",
+    },
+    {
+      id: 4,
+      link: "experince",
+    },
+    {
+      id: 5,
+      link: "contact",
+    },
+  ];
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/project">Projects</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  )
+    <div className="flex justify-between items-center bg-black text-white w-full h-20 fixed">
+      <div>
+        <h1 className="font-signature text-5xl ml-5">Ahsan</h1>
+      </div>
+      <ul className="flex ">
+        <li className="px-4">Home</li>
+        <li className="px-4">Home</li>
+        <li className="px-4">Home</li>
+        <li className="px-4">Home</li>
+      </ul>
+    </div>
+  );
 }
 
-export default NavbarComponent
+export default NavbarComponent;
