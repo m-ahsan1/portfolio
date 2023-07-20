@@ -1,5 +1,5 @@
 import React from "react";
-import { Fabars, Fatimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function NavbarComponent() {
   const links = [
@@ -17,7 +17,7 @@ function NavbarComponent() {
     },
     {
       id: 4,
-      link: "experince",
+      link: "experience",
     },
     {
       id: 5,
@@ -30,12 +30,19 @@ function NavbarComponent() {
       <div>
         <h1 className="font-signature text-5xl ml-5">Ahsan</h1>
       </div>
-      <ul className="flex ">
-        <li className="px-4">Home</li>
-        <li className="px-4">Home</li>
-        <li className="px-4">Home</li>
-        <li className="px-4">Home</li>
+      <ul className="hidden md:flex">
+        {links.map(({ id, link }) => (
+          <li
+            key={link.id}
+            className="px-4 cursor-pointer capitalize hover:scale-105 duration-200"
+          >
+            {link}
+          </li>
+        ))}
       </ul>
+      <div className="cursor-pointer pr-4 ">
+        <FaBars size={30} />
+      </div>
     </div>
   );
 }
