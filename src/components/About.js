@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="flex flex-col gap-10 justify-center h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white">
+    <div className="flex flex-col gap-10 justify-center h-screen w-full bg-gradient-to-t from-black to-gray-800 text-white">
       <h1 className="text-6xl font-bold inline ml-10">About</h1>
       <p className="mx-10 mt-20">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus

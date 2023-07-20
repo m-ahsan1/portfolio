@@ -25,6 +25,7 @@ function App() {
       <Links /> */}
       <NavbarComponent />
       <About />
+      <Projects />
     </div>
   );
 }
