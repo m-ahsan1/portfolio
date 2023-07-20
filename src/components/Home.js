@@ -1,6 +1,6 @@
 import React from "react";
 import NavbarComponent from "./Navbar";
-import Projects from "./Projects";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import i from "../assets/i.png";
 
 function Home() {
@@ -22,13 +22,16 @@ function Home() {
               voluptatem enim tempore quaerat aperiam sit sed, nostrum vel
               dolores qui a commodi voluptatibus!
             </p>
-            <button className="text-white w-fit px-6 py-3 my-2 bg-green-700 rounded-md ">
+            <button className="group text-white w-fit px-6 py-3 my-2 bg-green-700 rounded-md flex flex-row items-center ">
               Portfolio
+              <span className="group-hover:rotate-90 duration-300">
+                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
+              </span>
             </button>
           </div>
 
           <div>
-            <img className="w-32 h-32" src={i} alt="" />
+            <img className="w-52 h-82 rounded" src={i} alt="" />
           </div>
         </div>
       </div>
