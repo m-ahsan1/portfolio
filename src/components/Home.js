@@ -1,5 +1,4 @@
 import React from "react";
-import NavbarComponent from "./Navbar";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import i from "../assets/i.png";
 
@@ -9,7 +8,6 @@ function Home() {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
-      <NavbarComponent />
       <div>
         <div className="h-screen w-full mx-auto flex flex-col items-center justify-center px-4 md:flex-row">
           <div className="">

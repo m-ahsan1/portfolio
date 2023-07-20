@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import NavbarComponent from "./components/Navbar";
+import Links from "./components/Links";
 
 function App() {
   return (
@@ -18,7 +20,11 @@ function App() {
     //   </Routes>
     // </BrowserRouter>
     <div>
+      {/*
       <Home />
+      <Links /> */}
+      <NavbarComponent />
+      <About />
     </div>
   );
 }
