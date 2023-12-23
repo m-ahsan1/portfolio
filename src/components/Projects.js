@@ -4,7 +4,7 @@ import i from "../assets/i.png";
 function Projects(props) {
   return (
     <div
-      name="project"
+      name="projects"
       className="md:h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">

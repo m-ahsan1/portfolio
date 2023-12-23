@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function NavbarComponent() {
+  const [showNav, setShowNav] = useState(false);
   const links = [
     {
       id: 1,
@@ -13,7 +15,7 @@ function NavbarComponent() {
     },
     {
       id: 3,
-      link: "portfolio",
+      link: "projects",
     },
     {
       id: 4,
@@ -36,13 +38,37 @@ function NavbarComponent() {
             key={link.id}
             className="px-4 cursor-pointer capitalize hover:scale-105 duration-200"
           >
-            {link}
+            <Link to={link} smooth duration={500}>
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
-      <div className="cursor-pointer pr-4 ">
-        <FaBars size={30} />
+      <div
+        onClick={() => setShowNav(!showNav)}
+        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+      >
+        {showNav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
+      {showNav && (
+        <ul className="flex = flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          {links.map(({ id, link }) => (
+            <li
+              key={link.id}
+              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+            >
+              <Link
+                onClick={() => setShowNav(!showNav)}
+                to={link}
+                smooth
+                duration={500}
+              >
+                {link}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
