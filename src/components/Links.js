@@ -37,10 +37,10 @@ function Links() {
       id: 4,
       child: (
         <>
-          LinkedIn <BsFillPersonLinesFill size={30} />
+          Download Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/resume.pdf",
+      href: "resume.pdf",
       style: "rouded-br-md",
       download: true,
     },
@@ -63,6 +63,7 @@ function Links() {
               className="flex justify-between items-center w-full text-white"
               download={download}
               target="_blank"
+              rel="noopener noreferrer"
             >
               {child}
             </a>

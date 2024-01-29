@@ -5,6 +5,9 @@ import appli from "../assets/appli.png";
 import scraper from "../assets/scraper.jpeg";
 
 function Projects(props) {
+  const redirectToWebsite = (url) => {
+    window.open(url, "_blank");
+  };
   return (
     <div
       name="projects"
@@ -25,8 +28,26 @@ function Projects(props) {
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
-              <button className="hover:scale-105 duration:200">Demo</button>
-              <button className="hover:scale-105 duration:200">Code</button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://m-ahsan1.github.io/sequence-frontend/"
+                  )
+                }
+              >
+                Demo
+              </button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://github.com/m-ahsan1/sequence-frontend"
+                  )
+                }
+              >
+                Code
+              </button>{" "}
             </div>
           </div>
           <div>
@@ -36,8 +57,26 @@ function Projects(props) {
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
-              <button className="hover:scale-105 duration:200">Demo</button>
-              <button className="hover:scale-105 duration:200">Code</button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://github.com/m-ahsan1/fyp-bidding-bazaar"
+                  )
+                }
+              >
+                Demo
+              </button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://github.com/m-ahsan1/fyp-bidding-bazaar"
+                  )
+                }
+              >
+                Code
+              </button>{" "}
             </div>
           </div>
           <div>
@@ -47,8 +86,22 @@ function Projects(props) {
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
-              <button className="hover:scale-105 duration:200">Demo</button>
-              <button className="hover:scale-105 duration:200">Code</button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite("https://github.com/m-ahsan1/appli")
+                }
+              >
+                Demo
+              </button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite("https://github.com/m-ahsan1/appli")
+                }
+              >
+                Code
+              </button>{" "}
             </div>
           </div>
           <div>
@@ -58,8 +111,26 @@ function Projects(props) {
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
-              <button className="hover:scale-105 duration:200">Demo</button>
-              <button className="hover:scale-105 duration:200">Code</button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://github.com/m-ahsan1/pakwheels-data-scaper"
+                  )
+                }
+              >
+                Demo
+              </button>
+              <button
+                className="hover:scale-105 duration-200"
+                onClick={() =>
+                  redirectToWebsite(
+                    "https://github.com/m-ahsan1/pakwheels-data-scaper"
+                  )
+                }
+              >
+                Code
+              </button>{" "}
             </div>
           </div>
         </div>

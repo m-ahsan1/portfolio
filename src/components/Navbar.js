@@ -1,8 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 function NavbarComponent() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTop = window.scrollY < 100; // You can adjust the scroll threshold as needed
+      if (isTop !== scrolling) {
+        setScrolling(isTop);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolling]);
+
   const [showNav, setShowNav] = useState(false);
   const links = [
     {
@@ -28,7 +45,11 @@ function NavbarComponent() {
   ];
 
   return (
-    <div className="flex justify-between items-center bg-black text-white w-full h-20 fixed">
+    <div
+      className={`flex justify-between items-center ${
+        scrolling ? "bg-transparent" : "bg-black"
+      } text-white w-full h-20 fixed`}
+    >
       <div>
         <h1 className="font-signature text-5xl ml-5">Ahsan</h1>
       </div>
