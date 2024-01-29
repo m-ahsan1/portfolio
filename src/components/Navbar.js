@@ -48,7 +48,7 @@ function NavbarComponent() {
     <div
       className={`flex justify-between items-center ${
         scrolling ? "bg-transparent" : "bg-black"
-      } text-white w-full h-20 fixed`}
+      } text-white w-full h-20 fixed z-10`}
     >
       <div>
         <h1 className="font-signature text-5xl ml-5">Ahsan</h1>
@@ -57,7 +57,7 @@ function NavbarComponent() {
         {links.map(({ id, link }) => (
           <li
             key={link.id}
-            className="px-4 cursor-pointer capitalize hover:scale-105 duration-200"
+            className="px-4 cursor-pointer capitalize hover:scale-105 duration-200 font-semibold"
           >
             <Link to={link} smooth duration={500}>
               {link}

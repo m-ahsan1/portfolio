@@ -64,11 +64,11 @@ function Experience() {
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-black to-gray-500 w-full h-screen"
+      className="bg-gradient-to-t from-black to-gray-800 w-full md:h-screen"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <h1 className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+          <h1 className="text-4xl sm:text-6xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </h1>
           <p className="py-6">

@@ -17,7 +17,7 @@ function Home() {
   // };
 
   const [text] = useTypewriter({
-    words: ["Frontend Developer", "Frontend Developer", "Frontend Developer"],
+    words: ["Muhammad Ahsan", "a Front-End Developer"],
     loop: {},
   });
 
@@ -34,19 +34,18 @@ function Home() {
       >
         <source src={bgHome} type="video/mp4" />
       </video>
-
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center mx-4">
+      <div className="absolute inset-0 bg-black opacity-30"></div>
+      <div className="flex flex-col-reverse md:flex-row gap-8 items-center justify-center mx-4 relative z-1">
         <div className="">
-          <h2 className="text-4xl sm:text-6xl font-bold mb-4">
-            I am a <span className="text-green-500">{text}</span>
+          <p className="text-lg">Hello!</p>
+          <h2 className="text-4xl sm:text-6xl font-bold mb-4 py-2">
+            I'm <span className="text-green-500">{text}</span>
             <Cursor />
           </h2>
-          <p className="flex-gray-500 py-4 max-w-lg text-lg">
-            Welcome to my portfolio! I'm a frontend developer specializing in
+          <p className="text-white font-medium py-2 max-w-lg text-lg">
+            Welcome to my portfolio! I'm a front-end developer specializing in
             React.js, HTML, and CSS, with a focus on creating seamless user
-            interfaces. My expertise extends to Tailwind CSS for streamlined
-            development. Explore my work to see how I blend creativity with
-            technical precision to deliver top-notch web solutions.
+            interfaces.
           </p>
           <Link
             to="projects"
@@ -62,9 +61,9 @@ function Home() {
             </span>
           </Link>
         </div>
-        <div className="z-1">
+        <div className="relative z-1">
           <img
-            className="rounded-full mx-auto w-2/3 md:w-full"
+            className="rounded-full mx-auto w-2/3 md:w-full mt-20 mb-5 sm:my-0"
             src={hero}
             alt=""
           />
