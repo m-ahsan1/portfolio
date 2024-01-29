@@ -1,5 +1,8 @@
 import React from "react";
-import i from "../assets/i.png";
+import sequence from "../assets/sequence.png";
+import biddingB from "../assets/biddingBazaar.png";
+import appli from "../assets/appli.png";
+import scraper from "../assets/scraper.jpeg";
 
 function Projects(props) {
   return (
@@ -18,7 +21,7 @@ function Projects(props) {
           <div>
             <img
               className="rounded-md duration-200 hover:scale-105"
-              src={i}
+              src={sequence}
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
@@ -29,7 +32,7 @@ function Projects(props) {
           <div>
             <img
               className="rounded-md duration-200 hover:scale-105"
-              src={i}
+              src={biddingB}
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
@@ -40,7 +43,7 @@ function Projects(props) {
           <div>
             <img
               className="rounded-md duration-200 hover:scale-105"
-              src={i}
+              src={appli}
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
@@ -51,18 +54,7 @@ function Projects(props) {
           <div>
             <img
               className="rounded-md duration-200 hover:scale-105"
-              src={i}
-              alt=""
-            />
-            <div className="flex justify-around items-center bg-black rounded-md h-10">
-              <button className="hover:scale-105 duration:200">Demo</button>
-              <button className="hover:scale-105 duration:200">Code</button>
-            </div>
-          </div>
-          <div>
-            <img
-              className="rounded-md duration-200 hover:scale-105"
-              src={i}
+              src={scraper}
               alt=""
             />
             <div className="flex justify-around items-center bg-black rounded-md h-10">
