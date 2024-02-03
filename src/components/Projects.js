@@ -89,7 +89,7 @@ function Projects(props) {
               <button
                 className="hover:scale-105 duration-200"
                 onClick={() =>
-                  redirectToWebsite("https://github.com/m-ahsan1/appli")
+                  redirectToWebsite("https://github.com/m-ahsan1/simplication")
                 }
               >
                 Demo
