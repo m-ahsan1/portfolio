@@ -40,7 +40,7 @@ function Links() {
           Download Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "resume.pdf",
+      href: "Resume.pdf",
       style: "rouded-br-md",
       download: true,
     },

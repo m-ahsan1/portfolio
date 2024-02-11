@@ -1,6 +1,29 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_btenur6",
+        "template_ei9g3tn",
+        form.current,
+        "tH-1KgshLpborsVCc"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       name="contact"
@@ -15,17 +38,21 @@ function Contact() {
         </div>
 
         <div className="flex justify-center items-center">
-          <form action="" className="flex flex-col w-full md:w-1/2">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col w-full md:w-1/2"
+          >
             <input
               type="text"
-              name="name"
+              name="user_name"
               placeholder="Your name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
 
             <input
               type="text"
-              name="email"
+              name="user_email"
               placeholder="Your email"
               className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             />
@@ -37,7 +64,10 @@ function Contact() {
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button
+              type="submit"
+              className="text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+            >
               Submit
             </button>
           </form>
